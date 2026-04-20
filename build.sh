@@ -116,7 +116,7 @@ git clone https://github.com/AstideLabs/AnyKernel3 -b master --single-branch --d
 # ------------- Building for AOSP -------------
 
 echo "Building for AOSP......"
-make $MAKE_ARGS ${TARGET_DEVICE}_defconfig
+make $MAKE_ARGS ${TARGET_DEVICE}_defconfig droidspaces.config droidspaces-additional.config
 
 if [ $KSU_ENABLE -eq 1 ]; then
     scripts/config --file out/.config \
